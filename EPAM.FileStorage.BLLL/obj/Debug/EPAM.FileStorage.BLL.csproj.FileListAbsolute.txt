@@ -1,0 +1,11 @@
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\bin\Debug\EPAM.FileStorage.BLLL.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\bin\Debug\EPAM.FileStorage.BLLL.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\bin\Debug\EPAM.FileStorage.DAOO.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\bin\Debug\EPAM.FileStorage.Entitiess.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\bin\Debug\EPAM.FileStorage.DAOO.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\bin\Debug\EPAM.FileStorage.Entitiess.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\obj\Debug\EPAM.FileStorage.BLL.csprojAssemblyReference.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\obj\Debug\EPAM.FileStorage.BLL.csproj.CoreCompileInputs.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\obj\Debug\EPAM.FileStorage.BLL.csproj.CopyComplete
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\obj\Debug\EPAM.FileStorage.BLLL.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\obj\Debug\EPAM.FileStorage.BLLL.pdb

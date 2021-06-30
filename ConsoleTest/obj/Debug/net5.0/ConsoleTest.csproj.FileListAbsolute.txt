@@ -1,0 +1,16 @@
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\bin\Debug\net5.0\ConsoleTest.exe
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\bin\Debug\net5.0\ConsoleTest.deps.json
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\bin\Debug\net5.0\ConsoleTest.runtimeconfig.json
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\bin\Debug\net5.0\ConsoleTest.runtimeconfig.dev.json
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\bin\Debug\net5.0\ConsoleTest.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\bin\Debug\net5.0\ref\ConsoleTest.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\bin\Debug\net5.0\ConsoleTest.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\obj\Debug\net5.0\ConsoleTest.csprojAssemblyReference.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\obj\Debug\net5.0\ConsoleTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\obj\Debug\net5.0\ConsoleTest.AssemblyInfoInputs.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\obj\Debug\net5.0\ConsoleTest.AssemblyInfo.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\obj\Debug\net5.0\ConsoleTest.csproj.CoreCompileInputs.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\obj\Debug\net5.0\ConsoleTest.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\obj\Debug\net5.0\ref\ConsoleTest.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\obj\Debug\net5.0\ConsoleTest.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\ConsoleTest\obj\Debug\net5.0\ConsoleTest.genruntimeconfig.cache

@@ -1,0 +1,12 @@
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAO\bin\Debug\netcoreapp3.1\EPAM.FileStorage.DAO.deps.json
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAO\bin\Debug\netcoreapp3.1\EPAM.FileStorage.DAO.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAO\bin\Debug\netcoreapp3.1\EPAM.FileStorage.DAO.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAO\bin\Debug\netcoreapp3.1\EPAM.FileStorage.Entities.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAO\bin\Debug\netcoreapp3.1\EPAM.FileStorage.Entities.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAO\obj\Debug\netcoreapp3.1\EPAM.FileStorage.DAO.csprojAssemblyReference.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAO\obj\Debug\netcoreapp3.1\EPAM.FileStorage.DAO.AssemblyInfoInputs.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAO\obj\Debug\netcoreapp3.1\EPAM.FileStorage.DAO.AssemblyInfo.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAO\obj\Debug\netcoreapp3.1\EPAM.FileStorage.DAO.csproj.CoreCompileInputs.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAO\obj\Debug\netcoreapp3.1\EPAM.FileStorage.DAO.csproj.CopyComplete
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAO\obj\Debug\netcoreapp3.1\EPAM.FileStorage.DAO.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAO\obj\Debug\netcoreapp3.1\EPAM.FileStorage.DAO.pdb

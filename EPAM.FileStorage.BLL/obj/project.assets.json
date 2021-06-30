@@ -1,49 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
-      "EPAM.FileStorage.DAO/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "EPAM.FileStorage.Entities": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/EPAM.FileStorage.DAO.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/EPAM.FileStorage.DAO.dll": {}
-        }
-      },
-      "EPAM.FileStorage.Entities/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/EPAM.FileStorage.Entities.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/EPAM.FileStorage.Entities.dll": {}
-        }
-      }
-    }
+    "net5.0": {}
   },
-  "libraries": {
-    "EPAM.FileStorage.DAO/1.0.0": {
-      "type": "project",
-      "path": "../EPAM.FileStorage.DAO/EPAM.FileStorage.DAO.csproj",
-      "msbuildProject": "../EPAM.FileStorage.DAO/EPAM.FileStorage.DAO.csproj"
-    },
-    "EPAM.FileStorage.Entities/1.0.0": {
-      "type": "project",
-      "path": "../EPAM.FileStorage.Entities/EPAM.FileStorage.Entities.csproj",
-      "msbuildProject": "../EPAM.FileStorage.Entities/EPAM.FileStorage.Entities.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0": [
-      "EPAM.FileStorage.DAO >= 1.0.0",
-      "EPAM.FileStorage.Entities >= 1.0.0"
-    ]
+    "net5.0": []
   },
   "packageFolders": {
     "C:\\Users\\www\\.nuget\\packages\\": {},
@@ -78,14 +40,7 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.DAO\\EPAM.FileStorage.DAO.csproj": {
-              "projectPath": "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.DAO\\EPAM.FileStorage.DAO.csproj"
-            },
-            "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.Entities\\EPAM.FileStorage.Entities.csproj": {
-              "projectPath": "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.Entities\\EPAM.FileStorage.Entities.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -112,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,14 @@
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\bin\Debug\netcoreapp3.1\EPAM.FileStorage.BLL.deps.json
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\bin\Debug\netcoreapp3.1\EPAM.FileStorage.BLL.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\bin\Debug\netcoreapp3.1\EPAM.FileStorage.BLL.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\bin\Debug\netcoreapp3.1\EPAM.FileStorage.DAO.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\bin\Debug\netcoreapp3.1\EPAM.FileStorage.Entities.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\bin\Debug\netcoreapp3.1\EPAM.FileStorage.DAO.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\bin\Debug\netcoreapp3.1\EPAM.FileStorage.Entities.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\obj\Debug\netcoreapp3.1\EPAM.FileStorage.BLL.csprojAssemblyReference.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\obj\Debug\netcoreapp3.1\EPAM.FileStorage.BLL.AssemblyInfoInputs.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\obj\Debug\netcoreapp3.1\EPAM.FileStorage.BLL.AssemblyInfo.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\obj\Debug\netcoreapp3.1\EPAM.FileStorage.BLL.csproj.CoreCompileInputs.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\obj\Debug\netcoreapp3.1\EPAM.FileStorage.BLL.csproj.CopyComplete
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\obj\Debug\netcoreapp3.1\EPAM.FileStorage.BLL.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLL\obj\Debug\netcoreapp3.1\EPAM.FileStorage.BLL.pdb

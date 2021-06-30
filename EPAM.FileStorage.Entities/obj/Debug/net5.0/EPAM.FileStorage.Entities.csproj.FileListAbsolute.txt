@@ -1,0 +1,12 @@
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entities\bin\Debug\net5.0\EPAM.FileStorage.Entities.deps.json
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entities\bin\Debug\net5.0\EPAM.FileStorage.Entities.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entities\bin\Debug\net5.0\ref\EPAM.FileStorage.Entities.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entities\bin\Debug\net5.0\EPAM.FileStorage.Entities.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entities\obj\Debug\net5.0\EPAM.FileStorage.Entities.csprojAssemblyReference.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entities\obj\Debug\net5.0\EPAM.FileStorage.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entities\obj\Debug\net5.0\EPAM.FileStorage.Entities.AssemblyInfoInputs.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entities\obj\Debug\net5.0\EPAM.FileStorage.Entities.AssemblyInfo.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entities\obj\Debug\net5.0\EPAM.FileStorage.Entities.csproj.CoreCompileInputs.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entities\obj\Debug\net5.0\EPAM.FileStorage.Entities.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entities\obj\Debug\net5.0\ref\EPAM.FileStorage.Entities.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entities\obj\Debug\net5.0\EPAM.FileStorage.Entities.pdb

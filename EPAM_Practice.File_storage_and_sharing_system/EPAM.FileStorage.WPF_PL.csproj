@@ -63,8 +63,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="entities\File.cs" />
-    <Compile Include="entities\Profile.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -96,6 +94,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\EPAM.FileStorage.BLL\EPAM.FileStorage.BLL.csproj">
+      <Project>{75e03a81-7909-4849-b055-2549c30c12a3}</Project>
+      <Name>EPAM.FileStorage.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPAM.FileStorage.Entities\EPAM.FileStorage.Entities.csproj">
+      <Project>{4519acda-d9f5-4994-b81c-38475ca19767}</Project>
+      <Name>EPAM.FileStorage.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

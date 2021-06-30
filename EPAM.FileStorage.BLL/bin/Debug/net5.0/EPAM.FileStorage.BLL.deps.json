@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "EPAM.FileStorage.BLL/1.0.0": {
+        "dependencies": {
+          "EPAM.FileStorage.DAO": "1.0.0",
+          "EPAM.FileStorage.Entities": "1.0.0"
+        },
+        "runtime": {
+          "EPAM.FileStorage.BLL.dll": {}
+        }
+      },
+      "EPAM.FileStorage.DAO/1.0.0": {
+        "dependencies": {
+          "EPAM.FileStorage.Entities": "1.0.0"
+        },
+        "runtime": {
+          "EPAM.FileStorage.DAO.dll": {}
+        }
+      },
+      "EPAM.FileStorage.Entities/1.0.0": {
+        "runtime": {
+          "EPAM.FileStorage.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EPAM.FileStorage.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EPAM.FileStorage.DAO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EPAM.FileStorage.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

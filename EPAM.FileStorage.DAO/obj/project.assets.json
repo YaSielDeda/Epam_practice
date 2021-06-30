@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
-      "EPAM.FileStorage.Entities/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/EPAM.FileStorage.Entities.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/EPAM.FileStorage.Entities.dll": {}
-        }
-      }
-    }
+    ".NETCoreApp,Version=v3.1": {}
   },
-  "libraries": {
-    "EPAM.FileStorage.Entities/1.0.0": {
-      "type": "project",
-      "path": "../EPAM.FileStorage.Entities/EPAM.FileStorage.Entities.csproj",
-      "msbuildProject": "../EPAM.FileStorage.Entities/EPAM.FileStorage.Entities.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0": [
-      "EPAM.FileStorage.Entities >= 1.0.0"
-    ]
+    ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
     "C:\\Users\\www\\.nuget\\packages\\": {},
@@ -50,20 +31,16 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "projectReferences": {
-            "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.Entities\\EPAM.FileStorage.Entities.csproj": {
-              "projectPath": "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.Entities\\EPAM.FileStorage.Entities.csproj"
-            }
-          }
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -73,8 +50,8 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -90,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

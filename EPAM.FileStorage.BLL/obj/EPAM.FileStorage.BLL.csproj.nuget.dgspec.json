@@ -32,135 +32,6 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {
-              "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.DAO\\EPAM.FileStorage.DAO.csproj": {
-                "projectPath": "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.DAO\\EPAM.FileStorage.DAO.csproj"
-              },
-              "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.Entities\\EPAM.FileStorage.Entities.csproj": {
-                "projectPath": "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.Entities\\EPAM.FileStorage.Entities.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.DAO\\EPAM.FileStorage.DAO.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.DAO\\EPAM.FileStorage.DAO.csproj",
-        "projectName": "EPAM.FileStorage.DAO",
-        "projectPath": "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.DAO\\EPAM.FileStorage.DAO.csproj",
-        "packagesPath": "C:\\Users\\www\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.DAO\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\www\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.Entities\\EPAM.FileStorage.Entities.csproj": {
-                "projectPath": "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.Entities\\EPAM.FileStorage.Entities.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.Entities\\EPAM.FileStorage.Entities.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.Entities\\EPAM.FileStorage.Entities.csproj",
-        "projectName": "EPAM.FileStorage.Entities",
-        "projectPath": "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.Entities\\EPAM.FileStorage.Entities.csproj",
-        "packagesPath": "C:\\Users\\www\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\www\\source\\repos\\EPAM_Practice.File_storage_and_sharing_system\\EPAM.FileStorage.Entities\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\www\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -188,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

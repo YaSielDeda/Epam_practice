@@ -1,0 +1,6 @@
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entitiess\bin\Debug\EPAM.FileStorage.Entitiess.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entitiess\bin\Debug\EPAM.FileStorage.Entitiess.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entitiess\obj\Debug\EPAM.FileStorage.Entities.csprojAssemblyReference.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entitiess\obj\Debug\EPAM.FileStorage.Entities.csproj.CoreCompileInputs.cache
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entitiess\obj\Debug\EPAM.FileStorage.Entitiess.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.Entitiess\obj\Debug\EPAM.FileStorage.Entitiess.pdb
