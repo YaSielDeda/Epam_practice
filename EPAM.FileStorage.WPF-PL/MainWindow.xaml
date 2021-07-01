@@ -5,49 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EPAM.FileStorage.WPF_PL"
         mc:Ignorable="d"
-        Title="MainWindow" Height="453.6" Width="848">
+        Title="MainWindow" Height="631.6" Width="1240.593">
     <Grid>
-        <ListView x:Name="LeftListView" HorizontalAlignment="Left" Height="350" Margin="10,60,0,0" VerticalAlignment="Top" Width="368">
+        <ListView x:Name="LeftListView" HorizontalAlignment="Left" Height="532" Margin="10,60,0,0" VerticalAlignment="Top" Width="563">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="30"/>
-                    <GridViewColumn Header="Name" Width="110"/>
-                    <GridViewColumn Header="Type" Width="50"/>
-                    <GridViewColumn Header="Last Interraction" Width="90"/>
-                    <GridViewColumn Header="Created" Width="90"/>
+                    <GridViewColumn x:Name="Icon" Width="30" DisplayMemberBinding="{Binding Icon}"/>
+                    <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Type" Width="60" DisplayMemberBinding="{Binding Type}"/>
+                    <GridViewColumn Header="Last Interraction" Width="130" DisplayMemberBinding="{Binding DateOfLastChange}"/>
+                    <GridViewColumn Header="Created" Width="130" DisplayMemberBinding="{Binding DateOfCreation}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Menu x:Name="Menu" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="840">
-            <MenuItem Header="File">
+        <Menu x:Name="Menu" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="1233" Margin="0,-1,0,0">
+            <MenuItem Header="Profile">
+                <MenuItem x:Name="CreateNewProfile" Header="Create new" Click="CreateNewProfile_Click"/>
+                <MenuItem x:Name="LoadProfile" Header="Load" Click="LoadProfile_Click"/>
                 <MenuItem Header="Exit"/>
             </MenuItem>
         </Menu>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="383,84,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox x:Name="LeftPath" HorizontalAlignment="Left" Height="23" Margin="10,32,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="334"/>
-        <TextBox x:Name="RightPath" HorizontalAlignment="Left" Height="23" Margin="463,32,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="334"/>
-        <Button HorizontalAlignment="Left" Margin="349,31,0,0" VerticalAlignment="Top" Width="29">
+        <Button Content="Button" HorizontalAlignment="Left" Margin="578,86,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="LeftPath" HorizontalAlignment="Left" Height="23" Margin="10,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="529"/>
+        <TextBox x:Name="RightPath" HorizontalAlignment="Left" Height="23" Margin="658,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="531"/>
+        <Button HorizontalAlignment="Left" Margin="544,31,0,0" VerticalAlignment="Top" Width="29">
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="LeftButtonChangeDirectory" Source="C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\pictures\arrow.png" Margin="0, 0, 5, 0" Height="18" Width="24" />
                 <TextBlock Text="Button"/>
             </StackPanel>
         </Button>
-        <ListView x:Name="RightListView" HorizontalAlignment="Left" Height="350" Margin="463,60,0,0" VerticalAlignment="Top" Width="368">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Width="30"/>
-                    <GridViewColumn Header="Name" Width="110"/>
-                    <GridViewColumn Header="Type" Width="50"/>
-                    <GridViewColumn Header="Last Interraction" Width="90"/>
-                    <GridViewColumn Header="Created" Width="90"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Button HorizontalAlignment="Left" Margin="802,31,0,0" VerticalAlignment="Top" Width="29">
+        <Button HorizontalAlignment="Left" Margin="1194,32,0,0" VerticalAlignment="Top" Width="29">
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="RightButtonChangeDirectory" Source="arrow1.png" Margin="0, 0, 5, 0" Height="18" Width="24" />
                 <TextBlock Text="Button"/>
             </StackPanel>
         </Button>
+        <ListView x:Name="RightListView" HorizontalAlignment="Left" Height="532" Margin="660,61,0,0" VerticalAlignment="Top" Width="563">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="30" DisplayMemberBinding="{Binding Icon}"/>
+                    <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Type" Width="60" DisplayMemberBinding="{Binding Type}"/>
+                    <GridViewColumn Header="Last Interraction" Width="130" DisplayMemberBinding="{Binding DateOfLastChange}"/>
+                    <GridViewColumn Header="Created" Width="130" DisplayMemberBinding="{Binding DateOfCreation}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

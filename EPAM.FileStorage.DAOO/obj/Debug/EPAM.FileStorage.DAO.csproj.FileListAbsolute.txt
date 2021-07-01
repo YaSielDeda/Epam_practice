@@ -7,3 +7,5 @@ C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.Fil
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAOO\obj\Debug\EPAM.FileStorage.DAO.csproj.CopyComplete
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAOO\obj\Debug\EPAM.FileStorage.DAOO.dll
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAOO\obj\Debug\EPAM.FileStorage.DAOO.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAOO\bin\Debug\Newtonsoft.Json.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.DAOO\bin\Debug\Newtonsoft.Json.xml

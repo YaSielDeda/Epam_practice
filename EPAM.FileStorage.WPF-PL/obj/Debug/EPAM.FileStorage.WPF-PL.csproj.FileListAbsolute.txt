@@ -20,3 +20,11 @@ C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.Fil
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\EPAM.FileStorage.WPF-PL.csproj.CopyComplete
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\EPAM.FileStorage.WPF-PL.exe
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\EPAM.FileStorage.WPF-PL.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\CreateNewProfile.g.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\CreateNewProfile.baml
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\Login.g.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\Login.baml
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\Enter.g.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\Enter.baml

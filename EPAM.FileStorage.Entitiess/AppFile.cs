@@ -8,20 +8,20 @@ namespace EPAM_Practice.File_storage_and_sharing_system.entities
 {
     public class AppFile
     {
-        public Guid ID { get; }
         public string Name { get; private set; }
         public string Type { get; private set; }
         public ulong Size { get; set; }
-        public DateTime DateOfCreation { get; }
+        public DateTime DateOfCreation { get; set; }
         public DateTime DateOfLastChange { get; set; }
-        public AppFile(string name, string type, ulong size)
+        public AppFile()
         {
-            ID = Guid.NewGuid();
-            Name = name;
-            Type = type;
+
+        }
+        public AppFile(ulong size, DateTime creationDate, DateTime lastChangeDate)
+        {
             Size = size;
-            DateOfCreation = DateTime.Now;
-            DateOfLastChange = DateTime.Now;
+            DateOfCreation = creationDate;
+            DateOfLastChange = lastChangeDate;
         }
         public void EditName(string str)
         {

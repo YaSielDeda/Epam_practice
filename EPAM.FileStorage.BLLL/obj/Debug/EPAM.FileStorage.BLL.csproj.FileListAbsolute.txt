@@ -9,3 +9,5 @@ C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.Fil
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\obj\Debug\EPAM.FileStorage.BLL.csproj.CopyComplete
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\obj\Debug\EPAM.FileStorage.BLLL.dll
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\obj\Debug\EPAM.FileStorage.BLLL.pdb
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.BLLL\bin\Debug\Newtonsoft.Json.xml

@@ -10,10 +10,10 @@ namespace EPAM.FileStorage.BLL
     public class FileLogic
     {
         private FileDAO _dao;
-        public FileLogic(FileDAO dao)
-        {
-            _dao = dao;
-        }
+        //public FileLogic(FileDAO dao)
+        //{
+        //    _dao = dao;
+        //}
         public void CreateTextFile(string fileName)
         {
             _dao.CreateTextFile(fileName);
