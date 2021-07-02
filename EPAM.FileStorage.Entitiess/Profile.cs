@@ -19,8 +19,8 @@ namespace EPAM_Practice.File_storage_and_sharing_system.entities
         {
             DateOfCreation = DateTime.Now;
             LastActivity = DateTime.Now;
-            LastDirectoryLeft = Directory.GetCurrentDirectory();
-            LastDirectoryRight = Directory.GetCurrentDirectory();
+            //LastDirectoryLeft = Directory.GetCurrentDirectory();
+            //LastDirectoryRight = Directory.GetCurrentDirectory();
         }
         public void SetPassword(string password)
         {

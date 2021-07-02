@@ -40,14 +40,14 @@ namespace EPAM.FileStorage.DAO
                 File.Delete($"{JsonFilesPath}\\{_profile.Name}");
             else throw new FileNotFoundException("File with this name doesn't exists");
         }
-        public bool Login(Profile profile)
+        public Profile Login(Profile profile)
         {
             if (File.Exists($"{JsonFilesPath}\\{profile.Name}"))
             {
                 Profile checkProfile = JsonConvert.DeserializeObject<Profile>(File.ReadAllText($"{JsonFilesPath}\\{profile.Name}"));
                 if (profile.Password == checkProfile.Password)
-                    return true;
-                else return false;
+                    return checkProfile;
+                else return null;
             }
             else throw new FileNotFoundException("File with this name doesn't exists");
         }

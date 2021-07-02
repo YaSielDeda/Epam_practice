@@ -42,7 +42,7 @@ namespace EPAM.FileStorage.WPF_PL
                     profile.SetName(NameTextBox.Text);
                     profile.SetPassword(PasswordTextBox.Text);
 
-                    profileLogic.Login(profile.Name, profile.Password);
+                    profile = profileLogic.Login(profile.Name, profile.Password);
 
                     MessageBox.Show($"You are logged in as {profile.Name}", "Success", MessageBoxButton.OK);
                     Close();

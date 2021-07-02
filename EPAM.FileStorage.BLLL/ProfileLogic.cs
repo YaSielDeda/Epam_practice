@@ -23,15 +23,17 @@ namespace EPAM.FileStorage.BLL
             profile.SetPassword(EncryptPassword(password));
             _dao.CreateNewProfile(profile);
         }
-        public bool Login(string name, string password)
+        public Profile Login(string name, string password)
         {
             Profile profile = new Profile();
             profile.SetName(name);
             profile.SetPassword(EncryptPassword(password));
 
-            if (_dao.Login(profile))
-                return true;
-            else return false;
+            profile = _dao.Login(profile);
+
+            if (profile != null)
+                return profile;
+            else throw new Exception("Profile doesn't exist");
         }
         private string EncryptPassword(string rawPassword)
         {

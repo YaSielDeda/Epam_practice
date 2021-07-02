@@ -33,6 +33,7 @@ namespace EPAM.FileStorage.WPF_PL
             Enter enter = new Enter();
             enter.ShowDialog();
             profile = enter.profile;
+            profileLogic = new ProfileLogic(profile);
 
             Load();
         }
@@ -42,21 +43,34 @@ namespace EPAM.FileStorage.WPF_PL
             {
                 LeftPath.Text = profile.LastDirectoryLeft;
                 RightPath.Text = profile.LastDirectoryRight;
-                LoadDirectories();
+                LoadLeftDirectory();
+                LoadRightDirectory();
             }
         }
-        private void AddBack()
+        private void LoadLeftDirectory()
         {
-            AppFile appFile = new AppFile() { };
-            appFile.EditName("...");
-            LeftListView.Items.Add(appFile);
-            RightListView.Items.Add(appFile);
-        }
-        private void LoadDirectories()
-        {
+            LeftListView.Items.Clear();
+
+            string[] AllDirectoriesLeft = Directory.GetDirectories(profile.LastDirectoryLeft);
+
+            foreach (var folder in AllDirectoriesLeft)
+            {
+                try
+                {
+                    FileInfo fi = new FileInfo(folder);
+                    AppFile appFile = new AppFile((ulong)Directory.GetFiles(folder).Length, fi.CreationTime, fi.LastWriteTime) { };
+                    appFile.EditName(fi.Name);
+                    appFile.EditType("folder");
+                    LeftListView.Items.Add(appFile);
+                }
+                catch (UnauthorizedAccessException uae)
+                {
+
+                }
+            }
+
             string[] AllFilesLeft = Directory.GetFiles(profile.LastDirectoryLeft);
-            string[] AllFilesRight = Directory.GetFiles(profile.LastDirectoryRight);
-            AddBack();
+
             foreach (var file in AllFilesLeft)
             {
                 FileInfo fi = new FileInfo(file);
@@ -65,6 +79,31 @@ namespace EPAM.FileStorage.WPF_PL
                 appFile.EditType(fi.Extension);
                 LeftListView.Items.Add(appFile);
             }
+        }
+        private void LoadRightDirectory()
+        {
+            RightListView.Items.Clear();
+
+            string[] AllDirectoriesRight = Directory.GetDirectories(profile.LastDirectoryLeft);
+
+            foreach (var folder in AllDirectoriesRight)
+            {
+                try
+                {
+                    FileInfo fi = new FileInfo(folder);
+                    AppFile appFile = new AppFile((ulong)Directory.GetFiles(folder).Length, fi.CreationTime, fi.LastWriteTime) { };
+                    appFile.EditName(fi.Name);
+                    appFile.EditType("folder");
+                    LeftListView.Items.Add(appFile);
+                }
+                catch (UnauthorizedAccessException uae)
+                {
+
+                }
+            }
+
+            string[] AllFilesRight = Directory.GetFiles(profile.LastDirectoryRight);
+
             foreach (var file in AllFilesRight)
             {
                 FileInfo fi = new FileInfo(file);
@@ -89,6 +128,64 @@ namespace EPAM.FileStorage.WPF_PL
             login.ShowDialog();
             profile = login.profile;
             Load();
+        }
+
+        private void LeftGoToButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(LeftPath.Text) && !string.IsNullOrWhiteSpace(LeftPath.Text))
+            {
+                if (Directory.Exists(LeftPath.Text))
+                {
+                    profile.LastDirectoryLeft = LeftPath.Text;
+                    profileLogic.ChangeProfile(profile);
+                    LoadLeftDirectory();
+                }
+                else
+                {
+                    MessageBox.Show("This path doesn't exist", "Path error", MessageBoxButton.OK);
+                    LeftPath.Text = profile.LastDirectoryLeft;
+                }
+            }
+        }
+
+        private void RightGoToButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(RightPath.Text) && !string.IsNullOrWhiteSpace(RightPath.Text))
+            {
+                if (Directory.Exists(RightPath.Text))
+                {
+                    profile.LastDirectoryRight = RightPath.Text;
+                    profileLogic.ChangeProfile(profile);
+                    LoadRightDirectory();
+                }
+                else
+                {
+                    MessageBox.Show("This path doesn't exist", "Path error", MessageBoxButton.OK);
+                    RightPath.Text = profile.LastDirectoryRight;
+                }
+            }
+        }
+
+        private void UpToDirectoryLeftButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(LeftPath.Text != @"C\\" || LeftPath.Text != @"D\\")
+            {
+                LeftPath.Text = Directory.GetParent(LeftPath.Text).FullName;
+                profile.LastDirectoryLeft = LeftPath.Text;
+                profileLogic.ChangeProfile(profile);
+                LoadLeftDirectory();
+            }
+        }
+
+        private void UpToDirectoryRightButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (RightPath.Text != @"C\\" || RightPath.Text != @"D\\")
+            {
+                RightPath.Text = Directory.GetParent(RightPath.Text).FullName;
+                profile.LastDirectoryRight = RightPath.Text;
+                profileLogic.ChangeProfile(profile);
+                LoadLeftDirectory();
+            }
         }
     }
 }
