@@ -15,6 +15,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using EPAM.FileStorage.BLL;
 using EPAM_Practice.File_storage_and_sharing_system.entities;
+using Microsoft.Win32;
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace EPAM.FileStorage.WPF_PL
 {
@@ -185,6 +187,36 @@ namespace EPAM.FileStorage.WPF_PL
                 profile.LastDirectoryRight = RightPath.Text;
                 profileLogic.ChangeProfile(profile);
                 LoadLeftDirectory();
+            }
+        }
+
+        private void ChangeDirectoryLeftButton_Click(object sender, RoutedEventArgs e)
+        {
+            CommonOpenFileDialog openFileDialog = new CommonOpenFileDialog();
+            openFileDialog.InitialDirectory = profile.LastDirectoryLeft;
+            openFileDialog.IsFolderPicker = true;
+
+            if (openFileDialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                profile.LastDirectoryLeft = openFileDialog.FileName;
+                LeftPath.Text = profile.LastDirectoryLeft;
+                profileLogic.ChangeProfile(profile);
+                LoadLeftDirectory();
+            }
+        }
+
+        private void ChangeDirectoryRightButton_Click(object sender, RoutedEventArgs e)
+        {
+            CommonOpenFileDialog openFileDialog = new CommonOpenFileDialog();
+            openFileDialog.InitialDirectory = profile.LastDirectoryLeft;
+            openFileDialog.IsFolderPicker = true;
+
+            if (openFileDialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                profile.LastDirectoryRight = openFileDialog.FileName;
+                RightPath.Text = profile.LastDirectoryRight;
+                profileLogic.ChangeProfile(profile);
+                LoadRightDirectory();
             }
         }
     }

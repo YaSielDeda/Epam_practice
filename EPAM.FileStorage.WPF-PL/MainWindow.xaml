@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EPAM.FileStorage.WPF_PL"
         mc:Ignorable="d"
-        Title="MainWindow" Height="631.6" Width="1240.593">
+        Title="MainWindow" Height="631.6" Width="1240.593" ResizeMode="NoResize">
     <Grid>
         <ListView x:Name="LeftListView" HorizontalAlignment="Left" Height="532" Margin="10,60,0,0" VerticalAlignment="Top" Width="563" ItemsSource="{Binding Images}">
             <ListView.View>
@@ -24,21 +24,20 @@
                 <MenuItem Header="Exit"/>
             </MenuItem>
         </Menu>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="578,86,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox x:Name="LeftPath" HorizontalAlignment="Left" Height="21" Margin="10,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500"/>
-        <TextBox x:Name="RightPath" HorizontalAlignment="Left" Height="21" Margin="658,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500"/>
+        <TextBox x:Name="LeftPath" HorizontalAlignment="Left" Height="21" Margin="45,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="463"/>
+        <TextBox x:Name="RightPath" HorizontalAlignment="Left" Height="21" Margin="693,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="463"/>
         <Button HorizontalAlignment="Left" Margin="544,31,0,0" VerticalAlignment="Top" Width="29">
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="LeftButtonChangeDirectory" Source="C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\pictures\arrow.png" Margin="0, 0, 5, 0" Height="18" Width="24" />
             </StackPanel>
         </Button>
-        <Button x:Name="RightGoToButton" HorizontalAlignment="Left" Margin="1194,31,0,0" VerticalAlignment="Top" Width="29" Height="24" Click="RightGoToButton_Click">
+        <Button x:Name="RightGoToButton" HorizontalAlignment="Left" Margin="1192,33,0,0" VerticalAlignment="Top" Width="29" Height="24" Click="RightGoToButton_Click">
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="RightButtonChangeDirectory" Source="C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\pictures\arrow.png" Margin="0, 0, 5, 0" Height="18" Width="24" />
                 <TextBlock Text="Button"/>
             </StackPanel>
         </Button>
-        <ListView x:Name="RightListView" HorizontalAlignment="Left" Height="532" Margin="660,61,0,0" VerticalAlignment="Top" Width="563">
+        <ListView x:Name="RightListView" HorizontalAlignment="Left" Height="532" Margin="658,62,0,0" VerticalAlignment="Top" Width="563">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding Name}"/>
@@ -63,14 +62,39 @@
                 <Image x:Name="LeftButtonChangeDirectory3" Source="arrow_back.png" Margin="0, 0, 5, 0" Height="18" Width="24" />
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="1163,31,0,0" VerticalAlignment="Top" Width="29">
+        <Button HorizontalAlignment="Left" Margin="1161,33,0,0" VerticalAlignment="Top" Width="29">
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="LeftButtonChangeDirectory4" Source="arrow3.png" Margin="0, 0, 5, 0" Height="18" Width="24" />
             </StackPanel>
         </Button>
-        <Button x:Name="UpToDirectoryRightButton" HorizontalAlignment="Left" Margin="1163,31,0,0" VerticalAlignment="Top" Width="29" Height="24" Click="UpToDirectoryRightButton_Click">
+        <Button x:Name="UpToDirectoryRightButton" HorizontalAlignment="Left" Margin="1161,33,0,0" VerticalAlignment="Top" Width="29" Height="24" Click="UpToDirectoryRightButton_Click">
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="LeftButtonChangeDirectory5" Source="arrow_back.png" Margin="0, 0, 5, 0" Height="18" Width="24" />
+            </StackPanel>
+        </Button>
+        <Button x:Name="ChangeDirectoryLeftButton" HorizontalAlignment="Left" Margin="11,31,0,0" VerticalAlignment="Top" Width="29" Height="23" Click="ChangeDirectoryLeftButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton" Source="folder.png" Margin="0, 0, 5, 0" Height="18" Width="24" />
+            </StackPanel>
+        </Button>
+        <Button x:Name="ChangeDirectoryRightButton" HorizontalAlignment="Left" Margin="659,33,0,0" VerticalAlignment="Top" Width="29" Height="22" Click="ChangeDirectoryRightButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton1" Source="folder.png" Margin="0, 0, 5, 0" Height="18" Width="24" />
+            </StackPanel>
+        </Button>
+        <Button x:Name="ChangeDirectoryRightButton_Copy" HorizontalAlignment="Left" Margin="578,80,0,0" VerticalAlignment="Top" Width="75" Height="53" Click="ChangeDirectoryRightButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton2" Source="FromLeftToRight - копия.png" Margin="0, 0, 5, 0" Height="49" Width="70" />
+            </StackPanel>
+        </Button>
+        <Button x:Name="ChangeDirectoryRightButton_Copy1" HorizontalAlignment="Left" Margin="578,140,0,0" VerticalAlignment="Top" Width="75" Height="53" Click="ChangeDirectoryRightButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton3" Source="FromLeftToRight.png" Margin="0, 0, 5, 0" Height="49" Width="70" />
+            </StackPanel>
+        </Button>
+        <Button x:Name="ChangeDirectoryRightButton_Copy2" HorizontalAlignment="Left" Margin="579,540,0,0" VerticalAlignment="Top" Width="73" Height="52" Click="ChangeDirectoryRightButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton4" Source="trashcan.png" Margin="0, 0, 5, 0" Height="49" Width="70" />
             </StackPanel>
         </Button>
     </Grid>
