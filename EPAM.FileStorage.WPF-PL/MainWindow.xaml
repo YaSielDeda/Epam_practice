@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EPAM.FileStorage.WPF_PL"
         mc:Ignorable="d"
-        Title="MainWindow" Height="631.6" Width="1240.593" ResizeMode="NoResize">
+        Title="File Manager" Height="655.6" Width="1240.593" ResizeMode="NoResize">
     <Grid>
-        <ListView x:Name="LeftListView" HorizontalAlignment="Left" Height="532" Margin="10,60,0,0" VerticalAlignment="Top" Width="563" ItemsSource="{Binding Images}">
+        <ListView x:Name="LeftListView" MouseDoubleClick="LeftListView_MouseDoubleClick" HorizontalAlignment="Left" Height="483" Margin="10,60,0,0" VerticalAlignment="Top" Width="563" ItemsSource="{Binding Images}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding Name}"/>
@@ -37,7 +37,7 @@
                 <TextBlock Text="Button"/>
             </StackPanel>
         </Button>
-        <ListView x:Name="RightListView" HorizontalAlignment="Left" Height="532" Margin="658,62,0,0" VerticalAlignment="Top" Width="563">
+        <ListView x:Name="RightListView" MouseDoubleClick="RightListView_MouseDoubleClick" HorizontalAlignment="Left" Height="481" Margin="658,62,0,0" VerticalAlignment="Top" Width="563">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding Name}"/>
@@ -82,20 +82,63 @@
                 <Image x:Name="ChooseDirectoryLeftButton1" Source="folder.png" Margin="0, 0, 5, 0" Height="18" Width="24" />
             </StackPanel>
         </Button>
-        <Button x:Name="ChangeDirectoryRightButton_Copy" HorizontalAlignment="Left" Margin="578,80,0,0" VerticalAlignment="Top" Width="75" Height="53" Click="ChangeDirectoryRightButton_Click">
+        <Button x:Name="ReplaceFromLeftToRightDirectory" HorizontalAlignment="Left" Margin="578,80,0,0" VerticalAlignment="Top" Width="75" Height="55" Click="ReplaceFromLeftToRightDirectory_Click">
             <StackPanel Orientation="Horizontal">
-                <Image x:Name="ChooseDirectoryLeftButton2" Source="FromLeftToRight - копия.png" Margin="0, 0, 5, 0" Height="49" Width="70" />
+                <Image x:Name="ChooseDirectoryLeftButton2" Source="FromLeftToRight - копия.png" Margin="0, 0, 5, 0" Height="49" Width="72" />
             </StackPanel>
         </Button>
-        <Button x:Name="ChangeDirectoryRightButton_Copy1" HorizontalAlignment="Left" Margin="578,140,0,0" VerticalAlignment="Top" Width="75" Height="53" Click="ChangeDirectoryRightButton_Click">
+        <Button x:Name="ReplaceFromRightToLeftDirectory" HorizontalAlignment="Left" Margin="578,140,0,0" VerticalAlignment="Top" Width="75" Height="55" Click="ReplaceFromRightToLeftDirectory_Click">
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="ChooseDirectoryLeftButton3" Source="FromLeftToRight.png" Margin="0, 0, 5, 0" Height="49" Width="70" />
             </StackPanel>
         </Button>
-        <Button x:Name="ChangeDirectoryRightButton_Copy2" HorizontalAlignment="Left" Margin="579,540,0,0" VerticalAlignment="Top" Width="73" Height="52" Click="ChangeDirectoryRightButton_Click">
+        <Button x:Name="DeleteSelectedFromLeftButton" HorizontalAlignment="Left" Margin="11,548,0,0" VerticalAlignment="Top" Width="73" Height="45" Click="DeleteSelectedFromLeftButton_Click">
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="ChooseDirectoryLeftButton4" Source="trashcan.png" Margin="0, 0, 5, 0" Height="49" Width="70" />
             </StackPanel>
         </Button>
+        <Button x:Name="DeleteSelectedFromRightButton" HorizontalAlignment="Left" Margin="658,548,0,0" VerticalAlignment="Top" Width="73" Height="45" Click="DeleteSelectedFromRightButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton5" Source="trashcan.png" Margin="0, 0, 5, 0" Height="49" Width="70" />
+            </StackPanel>
+        </Button>
+        <Label Content="Delete" HorizontalAlignment="Left" Margin="26,589,0,-4" VerticalAlignment="Top"/>
+        <Label Content="Delete" HorizontalAlignment="Left" Margin="673,589,0,-4" VerticalAlignment="Top"/>
+        <Button x:Name="RenameSelectedFromLeftButton" HorizontalAlignment="Left" Margin="91,548,0,0" VerticalAlignment="Top" Width="73" Height="45" Click="RenameSelectedFromLeftButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton6" Source="rename.png" Margin="0, 0, 5, 0" Height="37" Width="53" />
+            </StackPanel>
+        </Button>
+        <Label Content="Rename" HorizontalAlignment="Left" Margin="100,589,0,-4" VerticalAlignment="Top"/>
+        <Button x:Name="RenameSelectedFromRightButton" HorizontalAlignment="Left" Margin="741,548,0,0" VerticalAlignment="Top" Width="73" Height="45" Click="RenameSelectedFromRightButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton7" Source="rename.png" Margin="0, 0, 5, 0" Height="37" Width="53" />
+            </StackPanel>
+        </Button>
+        <Label Content="Rename" HorizontalAlignment="Left" Margin="750,589,0,-4" VerticalAlignment="Top"/>
+        <Button x:Name="OpenSelectedFromLeftButton" HorizontalAlignment="Left" Margin="171,548,0,0" VerticalAlignment="Top" Width="73" Height="45" Click="OpenSelectedFromLeftButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton8" Source="open.png" Margin="0, 0, 5, 0" Height="49" Width="59" />
+            </StackPanel>
+        </Button>
+        <Label Content="Open" HorizontalAlignment="Left" Margin="188,589,0,-4"/>
+        <Button x:Name="OpenSelectedFromRightButton" HorizontalAlignment="Left" Margin="821,548,0,0" VerticalAlignment="Top" Width="73" Height="45" Click="OpenSelectedFromRightButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton9" Source="open.png" Margin="0, 0, 5, 0" Height="49" Width="59" />
+            </StackPanel>
+        </Button>
+        <Label Content="Open" HorizontalAlignment="Left" Margin="838,589,0,-4"/>
+        <Button x:Name="CreateLeftButton" HorizontalAlignment="Left" Margin="251,548,0,0" VerticalAlignment="Top" Width="73" Height="45" Click="CreateLeftButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton10" Source="create.png" Margin="0, 0, 5, 0" Height="33" Width="40" />
+            </StackPanel>
+        </Button>
+        <Label Content="Create" HorizontalAlignment="Left" Margin="266,589,0,-4"/>
+        <Button x:Name="CreateRightButton" HorizontalAlignment="Left" Margin="901,548,0,0" VerticalAlignment="Top" Width="73" Height="45" Click="CreateRightButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton11" Source="create.png" Margin="0, 0, 5, 0" Height="33" Width="40" />
+            </StackPanel>
+        </Button>
+        <Label Content="Create" HorizontalAlignment="Left" Margin="916,589,0,-4"/>
     </Grid>
 </Window>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace EPAM.FileStorage.WPF_PL
     /// </summary>
     public partial class MainWindow : Window
     {
-        FileLogic fileLogic;
+        //FileLogic fileLogic;
         ProfileLogic profileLogic;
         Profile profile;
         public MainWindow()
@@ -170,7 +171,7 @@ namespace EPAM.FileStorage.WPF_PL
 
         private void UpToDirectoryLeftButton_Click(object sender, RoutedEventArgs e)
         {
-            if(LeftPath.Text != @"C\\" || LeftPath.Text != @"D\\")
+            if(LeftPath.Text != @"C\\" || LeftPath.Text != @"D\\" || LeftPath.Text != @"E\\")
             {
                 LeftPath.Text = Directory.GetParent(LeftPath.Text).FullName;
                 profile.LastDirectoryLeft = LeftPath.Text;
@@ -181,7 +182,7 @@ namespace EPAM.FileStorage.WPF_PL
 
         private void UpToDirectoryRightButton_Click(object sender, RoutedEventArgs e)
         {
-            if (RightPath.Text != @"C\\" || RightPath.Text != @"D\\")
+            if (RightPath.Text != @"C\\" || RightPath.Text != @"D\\" || LeftPath.Text != @"E\\")
             {
                 RightPath.Text = Directory.GetParent(RightPath.Text).FullName;
                 profile.LastDirectoryRight = RightPath.Text;
@@ -216,6 +217,226 @@ namespace EPAM.FileStorage.WPF_PL
                 profile.LastDirectoryRight = openFileDialog.FileName;
                 RightPath.Text = profile.LastDirectoryRight;
                 profileLogic.ChangeProfile(profile);
+                LoadRightDirectory();
+            }
+        }
+
+        private void ReplaceFromLeftToRightDirectory_Click(object sender, RoutedEventArgs e)
+        {
+            if(LeftListView.SelectedItem != null)
+            {
+                AppFile fileName = (AppFile)LeftListView.SelectedItem;
+
+                if(fileName.Type != "folder")
+                    File.Move(profile.LastDirectoryLeft + @"\" + fileName.Name, profile.LastDirectoryRight + @"\" + fileName.Name);
+                else
+                    Directory.Move(profile.LastDirectoryLeft + @"\" + fileName.Name, profile.LastDirectoryRight + @"\" + fileName.Name);
+
+                LoadLeftDirectory();
+                LoadRightDirectory();
+            }
+        }
+
+        private void ReplaceFromRightToLeftDirectory_Click(object sender, RoutedEventArgs e)
+        {
+            if (RightListView.SelectedItem != null)
+            {
+                AppFile fileName = (AppFile)RightListView.SelectedItem;
+
+                if(fileName.Type != "folder")
+                    File.Move(profile.LastDirectoryRight + @"\" + fileName.Name, profile.LastDirectoryLeft + @"\" + fileName.Name);
+                else
+                    Directory.Move(profile.LastDirectoryRight + @"\" + fileName.Name, profile.LastDirectoryLeft + @"\" + fileName.Name);
+
+                LoadLeftDirectory();
+                LoadRightDirectory();
+            }
+        }
+
+        private void DeleteSelectedFromLeftButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (LeftListView.SelectedItem != null)
+            {
+                AppFile fileName = (AppFile)LeftListView.SelectedItem;
+
+                ConfirmDelete confirmDelete = new ConfirmDelete();
+                confirmDelete.ShowDialog();
+                
+                if(confirmDelete.Delete == true)
+                {
+                    if (fileName.Type != "folder")
+                        File.Delete(profile.LastDirectoryLeft + @"\" + fileName.Name);
+                    else
+                        Directory.Delete(profile.LastDirectoryLeft + @"\" + fileName.Name);
+
+                    LoadLeftDirectory();
+                }                
+            }
+        }
+
+        private void DeleteSelectedFromRightButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (RightListView.SelectedItem != null)
+            {
+                AppFile fileName = (AppFile)RightListView.SelectedItem;
+
+                ConfirmDelete confirmDelete = new ConfirmDelete();
+                confirmDelete.ShowDialog();
+
+                if (confirmDelete.Delete == true)
+                {
+                    if (fileName.Type != "folder")
+                        File.Delete(profile.LastDirectoryRight + @"\" + fileName.Name);
+                    else
+                        Directory.Delete(profile.LastDirectoryRight + @"\" + fileName.Name);
+
+                    LoadRightDirectory();
+                }
+            }
+        }
+
+        private void RenameSelectedFromLeftButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (LeftListView.SelectedItem != null)
+            {
+                AppFile fileName = (AppFile)LeftListView.SelectedItem;
+
+                RenameWindow renameWindow = new RenameWindow();
+                renameWindow.ShowDialog();
+
+                if (renameWindow.newName != null)
+                {
+                    if (fileName.Type != "folder")
+                        File.Move(profile.LastDirectoryLeft + @"\" + fileName.Name, profile.LastDirectoryLeft + @"\" + renameWindow.newName);
+                    else
+                        Directory.Move(profile.LastDirectoryLeft + @"\" + fileName.Name, profile.LastDirectoryLeft + @"\" + renameWindow.newName);
+
+                    LoadLeftDirectory();
+                }               
+            }
+        }
+
+        private void RenameSelectedFromRightButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (RightListView.SelectedItem != null)
+            {
+                AppFile fileName = (AppFile)RightListView.SelectedItem;
+
+                RenameWindow renameWindow = new RenameWindow();
+                renameWindow.ShowDialog();
+
+                if (renameWindow.newName != null)
+                {
+                    if (fileName.Type != "folder")
+                        File.Move(profile.LastDirectoryRight + @"\" + fileName.Name, profile.LastDirectoryRight + @"\" + renameWindow.newName);
+                    else
+                        Directory.Move(profile.LastDirectoryRight + @"\" + fileName.Name, profile.LastDirectoryRight + @"\" + renameWindow.newName);
+
+                    LoadRightDirectory();
+                }
+            }
+        }
+
+        private void OpenSelectedFromLeftButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (LeftListView.SelectedItem != null)
+            {
+                AppFile fileName = (AppFile)LeftListView.SelectedItem;
+
+                if(fileName.Type == "folder")
+                {
+                    profile.LastDirectoryLeft = profile.LastDirectoryLeft + @"\" + fileName.Name;
+                    profileLogic.ChangeProfile(profile);
+                    LeftPath.Text = profile.LastDirectoryLeft;
+                    LoadLeftDirectory();
+                }
+                else
+                    Process.Start(profile.LastDirectoryLeft + @"\" + fileName.Name);
+            }
+        }
+
+        private void LeftListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (LeftListView.SelectedItem != null)
+            {
+                AppFile fileName = (AppFile)LeftListView.SelectedItem;
+
+                if (fileName.Type == "folder")
+                {
+                    profile.LastDirectoryLeft = profile.LastDirectoryLeft + @"\" + fileName.Name;
+                    profileLogic.ChangeProfile(profile);
+                    LeftPath.Text = profile.LastDirectoryLeft;
+                    LoadLeftDirectory();
+                }
+                else
+                    Process.Start(profile.LastDirectoryLeft + @"\" + fileName.Name);
+            }
+        }
+
+        private void OpenSelectedFromRightButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (RightListView.SelectedItem != null)
+            {
+                AppFile fileName = (AppFile)RightListView.SelectedItem;
+
+                if (fileName.Type == "folder")
+                {
+                    profile.LastDirectoryRight = profile.LastDirectoryRight + @"\" + fileName.Name;
+                    profileLogic.ChangeProfile(profile);
+                    RightPath.Text = profile.LastDirectoryRight;
+                    LoadRightDirectory();
+                }
+                else
+                    Process.Start(profile.LastDirectoryRight + @"\" + fileName.Name);
+            }
+        }
+
+        private void RightListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (RightListView.SelectedItem != null)
+            {
+                AppFile fileName = (AppFile)RightListView.SelectedItem;
+
+                if (fileName.Type == "folder")
+                {
+                    profile.LastDirectoryRight = profile.LastDirectoryRight + @"\" + fileName.Name;
+                    profileLogic.ChangeProfile(profile);
+                    RightPath.Text = profile.LastDirectoryRight;
+                    LoadRightDirectory();
+                }
+                else
+                    Process.Start(profile.LastDirectoryRight + @"\" + fileName.Name);
+            }
+        }
+
+        private void CreateLeftButton_Click(object sender, RoutedEventArgs e)
+        {
+            CreateNewFileOrFolder create = new CreateNewFileOrFolder();
+            create.ShowDialog();
+
+            if(create.name != null)
+            {
+                if (create.type == "file")
+                    File.Create(profile.LastDirectoryLeft + @"\" + create.name + ".txt");
+                if (create.type == "folder")
+                    Directory.CreateDirectory(profile.LastDirectoryLeft + @"\" + create.name);
+
+                LoadLeftDirectory();
+            }
+        }
+
+        private void CreateRightButton_Click(object sender, RoutedEventArgs e)
+        {
+            CreateNewFileOrFolder create = new CreateNewFileOrFolder();
+            create.ShowDialog();
+
+            if (create.name != null)
+            {
+                if (create.type == "file")
+                    File.Create(profile.LastDirectoryRight + @"\" + create.name + ".txt");
+                if (create.type == "folder")
+                    Directory.CreateDirectory(profile.LastDirectoryRight + @"\" + create.name);
+
                 LoadRightDirectory();
             }
         }

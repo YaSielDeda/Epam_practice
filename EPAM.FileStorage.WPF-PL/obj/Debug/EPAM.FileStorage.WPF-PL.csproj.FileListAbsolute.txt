@@ -37,3 +37,9 @@ C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.Fil
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\ConfirmDelete.g.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\ConfirmDelete.baml
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\RenameWindow.g.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\RenameWindow.baml
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\CreateNewFileOrFolder.g.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\CreateNewFileOrFolder.baml

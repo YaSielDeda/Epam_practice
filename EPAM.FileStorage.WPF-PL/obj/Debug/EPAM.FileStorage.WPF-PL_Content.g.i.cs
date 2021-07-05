@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("trashcan.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("create.png")]
 
 

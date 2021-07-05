@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\App.xaml
-41426109753
+7880967032
 
-91114276754
+12-462009005
 182066465903
-CreateNewProfile.xaml;Enter.xaml;Login.xaml;MainWindow.xaml;
+ConfirmDelete.xaml;CreateNewFileOrFolder.xaml;CreateNewProfile.xaml;Enter.xaml;Login.xaml;MainWindow.xaml;RenameWindow.xaml;
 
-False
+True
 
