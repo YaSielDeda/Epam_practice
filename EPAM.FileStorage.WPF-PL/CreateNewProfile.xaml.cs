@@ -40,14 +40,14 @@ namespace EPAM.FileStorage.WPF_PL
                 {
                     try
                     {
-                        profile = new Profile();
+                        profile = new Profile(NameTextBox.Text, PasswordTextBox.Text);
                         profileLogic = new ProfileLogic(profile);
-                        profile.SetName(NameTextBox.Text);
-                        profile.SetPassword(PasswordTextBox.Text);
 
                         profileLogic.CreateProfile(profile.Name, profile.Password);
 
-                        MessageBox.Show("The new profile has been successfully created!", "Success", MessageBoxButton.OK);
+                        MessageBox.Show("The new profile has been successfully created! Now you can login", "Success", MessageBoxButton.OK);
+
+                        Close();
                     }
                     catch (Exception ex)
                     {

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EPAM.FileStorage.WPF_PL"
         mc:Ignorable="d"
-        Title="File Manager" Height="655.6" Width="1240.593" ResizeMode="NoResize">
+        Title="File Manager" Height="655.6" Width="1237.593" ResizeMode="NoResize">
     <Grid>
         <ListView x:Name="LeftListView" MouseDoubleClick="LeftListView_MouseDoubleClick" HorizontalAlignment="Left" Height="483" Margin="10,60,0,0" VerticalAlignment="Top" Width="563" ItemsSource="{Binding Images}">
             <ListView.View>
@@ -21,6 +21,7 @@
             <MenuItem Header="Profile">
                 <MenuItem x:Name="CreateNewProfile" Header="Create new" Click="CreateNewProfile_Click"/>
                 <MenuItem x:Name="LoadProfile" Header="Load" Click="LoadProfile_Click"/>
+                <MenuItem x:Name="ProfileInfo" Header="Profile info" Click="ProfileInfo_Click"/>
                 <MenuItem Header="Exit"/>
             </MenuItem>
         </Menu>
@@ -140,5 +141,21 @@
             </StackPanel>
         </Button>
         <Label Content="Create" HorizontalAlignment="Left" Margin="916,589,0,-4"/>
+        <TextBox x:Name="SearchTextBoxLeft" HorizontalAlignment="Left" Height="23" Margin="339,551,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
+        <Button x:Name="SearchLeftButton" HorizontalAlignment="Left" Margin="547,551,0,0" VerticalAlignment="Top" Width="26" Height="23" Click="SearchLeftButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton12" Source="searching.png" Margin="0, 0, 5, 0" Height="19" Width="22" />
+            </StackPanel>
+        </Button>
+        <RadioButton x:Name="SearchInFolderRButtonLeft" Content="In folder" HorizontalAlignment="Left" Margin="339,580,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="SearchInDirectoryRButtonLeft" Content="In directory" HorizontalAlignment="Left" Margin="412,580,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="SearchTextBoxRight" HorizontalAlignment="Left" Height="23" Margin="989,551,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
+        <Button x:Name="SearchRightButton" HorizontalAlignment="Left" Margin="1197,551,0,0" VerticalAlignment="Top" Width="26" Height="23" Click="SearchRightButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ChooseDirectoryLeftButton13" Source="searching.png" Margin="0, 0, 5, 0" Height="19" Width="22" />
+            </StackPanel>
+        </Button>
+        <RadioButton x:Name="SearchInFolderRButtonRight" Content="In folder" HorizontalAlignment="Left" Margin="989,580,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="SearchInDirectoryRButtonRight" Content="In directory" HorizontalAlignment="Left" Margin="1062,580,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

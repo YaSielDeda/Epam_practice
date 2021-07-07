@@ -28,13 +28,17 @@ namespace EPAM.FileStorage.WPF_PL
     {
         //FileLogic fileLogic;
         ProfileLogic profileLogic;
-        Profile profile;
+        public Profile profile;
         public MainWindow()
         {
             InitializeComponent();
 
             Enter enter = new Enter();
             enter.ShowDialog();
+
+            if (enter.exit)
+                Close();
+
             profile = enter.profile;
             profileLogic = new ProfileLogic(profile);
 
@@ -87,7 +91,7 @@ namespace EPAM.FileStorage.WPF_PL
         {
             RightListView.Items.Clear();
 
-            string[] AllDirectoriesRight = Directory.GetDirectories(profile.LastDirectoryLeft);
+            string[] AllDirectoriesRight = Directory.GetDirectories(profile.LastDirectoryRight);
 
             foreach (var folder in AllDirectoriesRight)
             {
@@ -97,7 +101,7 @@ namespace EPAM.FileStorage.WPF_PL
                     AppFile appFile = new AppFile((ulong)Directory.GetFiles(folder).Length, fi.CreationTime, fi.LastWriteTime) { };
                     appFile.EditName(fi.Name);
                     appFile.EditType("folder");
-                    LeftListView.Items.Add(appFile);
+                    RightListView.Items.Add(appFile);
                 }
                 catch (UnauthorizedAccessException uae)
                 {
@@ -182,12 +186,12 @@ namespace EPAM.FileStorage.WPF_PL
 
         private void UpToDirectoryRightButton_Click(object sender, RoutedEventArgs e)
         {
-            if (RightPath.Text != @"C\\" || RightPath.Text != @"D\\" || LeftPath.Text != @"E\\")
+            if (RightPath.Text != @"C\\" || RightPath.Text != @"D\\" || RightPath.Text != @"E\\")
             {
                 RightPath.Text = Directory.GetParent(RightPath.Text).FullName;
                 profile.LastDirectoryRight = RightPath.Text;
                 profileLogic.ChangeProfile(profile);
-                LoadLeftDirectory();
+                LoadRightDirectory();
             }
         }
 
@@ -301,7 +305,7 @@ namespace EPAM.FileStorage.WPF_PL
             {
                 AppFile fileName = (AppFile)LeftListView.SelectedItem;
 
-                RenameWindow renameWindow = new RenameWindow();
+                RenameWindow renameWindow = new RenameWindow(fileName);
                 renameWindow.ShowDialog();
 
                 if (renameWindow.newName != null)
@@ -322,7 +326,7 @@ namespace EPAM.FileStorage.WPF_PL
             {
                 AppFile fileName = (AppFile)RightListView.SelectedItem;
 
-                RenameWindow renameWindow = new RenameWindow();
+                RenameWindow renameWindow = new RenameWindow(fileName);
                 renameWindow.ShowDialog();
 
                 if (renameWindow.newName != null)
@@ -439,6 +443,65 @@ namespace EPAM.FileStorage.WPF_PL
 
                 LoadRightDirectory();
             }
+        }
+
+        private void ProfileInfo_Click(object sender, RoutedEventArgs e)
+        {
+            ProfileInfo profileInfo = new ProfileInfo(profile);
+            profileInfo.ShowDialog();
+        }
+
+        private void SearchLeftButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(!string.IsNullOrEmpty(SearchTextBoxLeft.Text) && !string.IsNullOrWhiteSpace(SearchTextBoxLeft.Text))
+            {
+                if (SearchInFolderRButtonLeft.IsChecked == true)
+                {
+                    SearchResults searchResults = new SearchResults("folder", SearchTextBoxLeft.Text, LeftPath.Text);
+                    SearchingLeft(searchResults);
+                }
+                else if (SearchInDirectoryRButtonLeft.IsChecked == true)
+                {
+                    SearchResults searchResults = new SearchResults("directory", SearchTextBoxLeft.Text, LeftPath.Text);
+                    SearchingLeft(searchResults);
+                }
+                else
+                    MessageBox.Show("You need to pick search option", "Error", MessageBoxButton.OK);
+            }
+        }
+        private void SearchRightButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(SearchTextBoxRight.Text) && !string.IsNullOrWhiteSpace(SearchTextBoxRight.Text))
+            {
+                if (SearchInFolderRButtonRight.IsChecked == true)
+                {
+                    SearchResults searchResults = new SearchResults("folder", SearchTextBoxRight.Text, RightPath.Text);
+                    SearchingRight(searchResults);
+                }
+                else if (SearchInDirectoryRButtonRight.IsChecked == true)
+                {
+                    SearchResults searchResults = new SearchResults("directory", SearchTextBoxRight.Text, RightPath.Text);
+                    SearchingRight(searchResults);
+                }
+                else
+                    MessageBox.Show("You need to pick search option", "Error", MessageBoxButton.OK);
+            }
+        }
+        private void SearchingLeft(SearchResults searchResults)
+        {
+            searchResults.ShowDialog();
+            LeftPath.Text = searchResults.resultPath;
+            profile.LastDirectoryLeft = searchResults.resultPath;
+            profileLogic.ChangeProfile(profile);
+            LoadLeftDirectory();
+        }
+        private void SearchingRight(SearchResults searchResults)
+        {
+            searchResults.ShowDialog();
+            RightPath.Text = searchResults.resultPath;
+            profile.LastDirectoryRight = searchResults.resultPath;
+            profileLogic.ChangeProfile(profile);
+            LoadRightDirectory();
         }
     }
 }

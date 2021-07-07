@@ -18,22 +18,24 @@ namespace EPAM.FileStorage.BLL
         }
         public void CreateProfile(string name, string password)
         {
-            Profile profile = new Profile();
-            profile.SetName(name);
-            profile.SetPassword(EncryptPassword(password));
-            _dao.CreateNewProfile(profile);
+            Profile profile = new Profile(name, EncryptPassword(password));
+            ProfileDAO profileDAO = new ProfileDAO(profile);
+            profileDAO.CreateNewProfile(profile);
         }
         public Profile Login(string name, string password)
         {
             Profile profile = new Profile();
             profile.SetName(name);
             profile.SetPassword(EncryptPassword(password));
-
-            profile = _dao.Login(profile);
-
-            if (profile != null)
-                return profile;
-            else throw new Exception("Profile doesn't exist");
+            try
+            {
+                profile = _dao.Login(profile);                
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            return profile;
         }
         private string EncryptPassword(string rawPassword)
         {
@@ -44,6 +46,14 @@ namespace EPAM.FileStorage.BLL
         public void ChangeProfile(Profile profile)
         {
             _dao.ChangeProfileInfo(profile);
+        }
+        public void ChangeProfileName(Profile profile, string newName)
+        {
+            _dao.ChangeProfileName(profile, newName);
+        }
+        public void ChangeProfilePassword(Profile profile, string newPassword)
+        {
+            _dao.ChangeProfilePassword(profile, EncryptPassword(newPassword));
         }
         public void RemoveProfile()
         {

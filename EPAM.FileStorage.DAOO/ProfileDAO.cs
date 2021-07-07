@@ -34,6 +34,28 @@ namespace EPAM.FileStorage.DAO
             }                
             else throw new FileLoadException("File with this name doesn't exists");
         }
+        public void ChangeProfileName(Profile profile, string newName)
+        {
+            if (File.Exists($"{JsonFilesPath}\\{profile.Name}"))
+            {
+                string fileName = profile.Name;
+                profile.SetName(newName);
+                string json = JsonConvert.SerializeObject(profile);
+                File.WriteAllText($"{JsonFilesPath}\\{profile.Name}", json);
+                File.Delete($"{JsonFilesPath}\\{fileName}");
+            }
+            else throw new FileLoadException("File with this name doesn't exists");
+        }
+        public void ChangeProfilePassword(Profile profile, string newPassword)
+        {
+            if (File.Exists($"{JsonFilesPath}\\{profile.Name}"))
+            {
+                profile.SetPassword(newPassword);
+                string json = JsonConvert.SerializeObject(profile);
+                File.WriteAllText($"{JsonFilesPath}\\{profile.Name}", json);
+            }
+            else throw new FileLoadException("File with this name doesn't exists");
+        }
         public void RemoveProfile()
         {
             if (File.Exists($"{JsonFilesPath}\\{_profile.Name}"))
@@ -47,7 +69,7 @@ namespace EPAM.FileStorage.DAO
                 Profile checkProfile = JsonConvert.DeserializeObject<Profile>(File.ReadAllText($"{JsonFilesPath}\\{profile.Name}"));
                 if (profile.Password == checkProfile.Password)
                     return checkProfile;
-                else return null;
+                else throw new ArgumentException("Wrong password");
             }
             else throw new FileNotFoundException("File with this name doesn't exists");
         }

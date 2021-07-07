@@ -43,3 +43,9 @@ C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.Fil
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\RenameWindow.baml
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\CreateNewFileOrFolder.g.cs
 C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\CreateNewFileOrFolder.baml
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\ChangeWindow.g.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\ProfileInfo.g.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\ChangeWindow.baml
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\ProfileInfo.baml
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\SearchResults.g.cs
+C:\Users\www\source\repos\EPAM_Practice.File_storage_and_sharing_system\EPAM.FileStorage.WPF-PL\obj\Debug\SearchResults.baml

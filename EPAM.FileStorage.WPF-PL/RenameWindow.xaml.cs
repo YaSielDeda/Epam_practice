@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EPAM_Practice.File_storage_and_sharing_system.entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,16 +21,21 @@ namespace EPAM.FileStorage.WPF_PL
     public partial class RenameWindow : Window
     {
         public string newName = null;
-        public RenameWindow()
+        AppFile file;
+        public RenameWindow(AppFile appFile)
         {
             InitializeComponent();
+            file = appFile;
         }
 
         private void RenameButton_Click(object sender, RoutedEventArgs e)
         {
             if(!string.IsNullOrEmpty(NewNameTextBox.Text) && !string.IsNullOrWhiteSpace(NewNameTextBox.Text))
             {
-                newName = NewNameTextBox.Text;
+                if(TypeCheckBox.IsChecked == true)
+                    newName = NewNameTextBox.Text + file.Type;
+                else
+                    newName = NewNameTextBox.Text;
                 Close();
             }
         }

@@ -21,6 +21,7 @@ namespace EPAM.FileStorage.WPF_PL
     public partial class Enter : Window
     {
         public Profile profile;
+        public bool exit = false;
         public Enter()
         {
             InitializeComponent();
@@ -42,6 +43,10 @@ namespace EPAM.FileStorage.WPF_PL
             Close();
         }
 
-        private void ExitButton_Click(object sender, RoutedEventArgs e) => Close();
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            exit = true;
+            Close();
+        }
     }
 }

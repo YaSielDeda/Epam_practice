@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EPAM.FileStorage.WPF_PL"
         mc:Ignorable="d"
-        Title="RenameWindow" Height="244.836" Width="435.264">
+        Title="RenameWindow" Height="244.836" Width="435.264" ResizeMode="NoResize">
     <Grid>
-        <Label Content="Enter the new name" HorizontalAlignment="Left" Margin="78,66,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="NewNameTextBox" HorizontalAlignment="Left" Height="23" Margin="78,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275"/>
-        <Button x:Name="CancelRenameButton" Content="Cancel" HorizontalAlignment="Left" Margin="122,131,0,0" VerticalAlignment="Top" Width="75" Click="CancelRenameButton_Click"/>
-        <Button x:Name="RenameButton" Content="OK" HorizontalAlignment="Left" Margin="240,131,0,0" VerticalAlignment="Top" Width="75" Click="RenameButton_Click"/>
+        <Label Content="Enter the new name" HorizontalAlignment="Left" Margin="78,59,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NewNameTextBox" HorizontalAlignment="Left" Height="23" Margin="78,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275"/>
+        <Button x:Name="CancelRenameButton" Content="Cancel" HorizontalAlignment="Left" Margin="122,148,0,0" VerticalAlignment="Top" Width="75" Click="CancelRenameButton_Click"/>
+        <Button x:Name="RenameButton" Content="OK" HorizontalAlignment="Left" Margin="240,148,0,0" VerticalAlignment="Top" Width="75" Click="RenameButton_Click"/>
+        <CheckBox x:Name="TypeCheckBox" Content="save this type" HorizontalAlignment="Left" Margin="78,121,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

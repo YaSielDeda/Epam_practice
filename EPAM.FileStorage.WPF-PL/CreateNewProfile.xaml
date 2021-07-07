@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EPAM.FileStorage.WPF_PL"
         mc:Ignorable="d"
-        Title="Create new profile" Height="319.355" Width="567.742">
+        Title="Create new profile" Height="319.355" Width="567.742" ResizeMode="NoResize">
     <Grid>
         <Label Content="Name" HorizontalAlignment="Left" Margin="151,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.396,-1.973"/>
         <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="284,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

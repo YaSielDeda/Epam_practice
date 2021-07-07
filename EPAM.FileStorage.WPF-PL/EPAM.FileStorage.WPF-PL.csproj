@@ -65,12 +65,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChangeWindow.xaml.cs">
+      <DependentUpon>ChangeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreateNewFileOrFolder.xaml.cs">
       <DependentUpon>CreateNewFileOrFolder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileInfo.xaml.cs">
+      <DependentUpon>ProfileInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="RenameWindow.xaml.cs">
       <DependentUpon>RenameWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchResults.xaml.cs">
+      <DependentUpon>SearchResults.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ChangeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ConfirmDelete.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -115,7 +128,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ProfileInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RenameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchResults.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -198,6 +219,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="searching.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
