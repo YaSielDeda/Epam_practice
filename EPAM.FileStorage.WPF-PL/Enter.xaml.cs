@@ -21,7 +21,6 @@ namespace EPAM.FileStorage.WPF_PL
     public partial class Enter : Window
     {
         public Profile profile;
-        public bool exit = false;
         public Enter()
         {
             InitializeComponent();
@@ -32,7 +31,11 @@ namespace EPAM.FileStorage.WPF_PL
             Login login = new Login();
             login.ShowDialog();
             profile = login.profile;
-            Close();
+            if(login.Logged == true)
+            {
+                login.Logged = true;
+                Close();
+            }                
         }
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
@@ -40,13 +43,13 @@ namespace EPAM.FileStorage.WPF_PL
             CreateNewProfile create = new CreateNewProfile();
             create.ShowDialog();
             profile = create.profile;
-            Close();
+            if (create.Logged == true)
+            {
+                create.Logged = true;
+                Close();
+            }
         }
 
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
-        {
-            exit = true;
-            Close();
-        }
+        private void ExitButton_Click(object sender, RoutedEventArgs e) => Application.Current.Shutdown();
     }
 }

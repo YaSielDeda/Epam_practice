@@ -36,9 +36,6 @@ namespace EPAM.FileStorage.WPF_PL
             Enter enter = new Enter();
             enter.ShowDialog();
 
-            if (enter.exit)
-                Close();
-
             profile = enter.profile;
             profileLogic = new ProfileLogic(profile);
 

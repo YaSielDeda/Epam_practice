@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EPAM.FileStorage.WPF_PL"
         mc:Ignorable="d"
-        Title="Login" Height="356.099" Width="633.065" ResizeMode="NoResize">
+        Title="Login" Height="356" Width="633" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FFE8E6E6">
     <Grid>
-        <Label Content="Login" HorizontalAlignment="Left" Margin="208,103,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="ConfirmButton" Content="OK" HorizontalAlignment="Left" Margin="330,192,0,0" VerticalAlignment="Top" Width="75" Click="ConfirmButton_Click"/>
-        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="308,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="208,142,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="308,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="208,192,0,0" VerticalAlignment="Top" Width="75" Click="CancelButton_Click"/>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="208,121,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ConfirmButton" Content="OK" HorizontalAlignment="Left" Margin="330,210,0,0" VerticalAlignment="Top" Width="75" Click="ConfirmButton_Click"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="308,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="208,160,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="308,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="208,210,0,0" VerticalAlignment="Top" Width="75" Click="CancelButton_Click"/>
 
     </Grid>
 </Window>

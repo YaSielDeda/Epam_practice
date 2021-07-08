@@ -223,5 +223,8 @@
   <ItemGroup>
     <Resource Include="searching.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="file manager.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

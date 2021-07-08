@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EPAM.FileStorage.WPF_PL"
         mc:Ignorable="d"
-        Title="Enter" Height="291.532" Width="565.323" ResizeMode="NoResize">
+        Title="Enter" Height="291.532" Width="565.323" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FFE8E6E6">
     <Grid>
-        <Label Content="You need to be authorized for using this app" HorizontalAlignment="Left" Margin="153,62,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="236,103,0,0" VerticalAlignment="Top" Width="75" Click="LoginButton_Click"/>
-        <Button x:Name="SignUpButton" Content="Sign up" HorizontalAlignment="Left" Margin="236,130,0,0" VerticalAlignment="Top" Width="75" Click="SignUpButton_Click"/>
-        <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="236,157,0,0" VerticalAlignment="Top" Width="75" Click="ExitButton_Click"/>
+        <Label Content="You need to be authorized for using this app" HorizontalAlignment="Left" Margin="153,83,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="236,124,0,0" VerticalAlignment="Top" Width="75" Click="LoginButton_Click"/>
+        <Button x:Name="SignUpButton" Content="Sign up" HorizontalAlignment="Left" Margin="236,151,0,0" VerticalAlignment="Top" Width="75" Click="SignUpButton_Click"/>
+        <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="236,178,0,0" VerticalAlignment="Top" Width="75" Click="ExitButton_Click"/>
 
     </Grid>
 </Window>

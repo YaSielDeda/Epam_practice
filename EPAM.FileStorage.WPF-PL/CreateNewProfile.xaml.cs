@@ -23,6 +23,7 @@ namespace EPAM.FileStorage.WPF_PL
     {
         public Profile profile;
         ProfileLogic profileLogic;
+        public bool Logged = false;
         public CreateNewProfile()
         {
             InitializeComponent();
@@ -45,7 +46,8 @@ namespace EPAM.FileStorage.WPF_PL
 
                         profileLogic.CreateProfile(profile.Name, profile.Password);
 
-                        MessageBox.Show("The new profile has been successfully created! Now you can login", "Success", MessageBoxButton.OK);
+                        MessageBox.Show("The new profile has been successfully created!", "Success", MessageBoxButton.OK);
+                        Logged = true;
 
                         Close();
                     }

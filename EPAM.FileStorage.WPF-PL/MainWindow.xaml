@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EPAM.FileStorage.WPF_PL"
         mc:Ignorable="d"
-        Title="File Manager" Height="655.6" Width="1237.593" ResizeMode="NoResize">
+        Title="File Manager" Height="655.6" Width="1237.593" ResizeMode="NoResize" Icon="file manager.jpg" WindowStartupLocation="CenterScreen">
     <Grid>
         <ListView x:Name="LeftListView" MouseDoubleClick="LeftListView_MouseDoubleClick" HorizontalAlignment="Left" Height="483" Margin="10,60,0,0" VerticalAlignment="Top" Width="563" ItemsSource="{Binding Images}">
             <ListView.View>

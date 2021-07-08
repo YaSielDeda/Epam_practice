@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EPAM.FileStorage.WPF_PL"
         mc:Ignorable="d"
-        Title="Create new profile" Height="319.355" Width="567.742" ResizeMode="NoResize">
+        Title="Create new profile" Height="319.355" Width="567.742" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FFE8E6E6">
     <Grid>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="151,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.396,-1.973"/>
-        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="284,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="151,105,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.396,-1.973"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="284,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Enter password again" HorizontalAlignment="Left" Margin="151,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.396,-1.973"/>
-        <TextBox x:Name="PasswordConfirmTextBox" HorizontalAlignment="Left" Height="23" Margin="284,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="CreateProfileButton" Content="OK" HorizontalAlignment="Left" Margin="301,199,0,0" VerticalAlignment="Top" Width="75" Click="CreateProfileButton_Click"/>
-        <Button x:Name="CancelCreateProfileButton" Content="Cancel" HorizontalAlignment="Left" Margin="175,199,0,0" VerticalAlignment="Top" Width="75" Click="CancelCreateProfileButton_Click"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="151,76,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.396,-1.973"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="284,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="151,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.396,-1.973"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="284,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Enter password again" HorizontalAlignment="Left" Margin="151,153,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.396,-1.973"/>
+        <TextBox x:Name="PasswordConfirmTextBox" HorizontalAlignment="Left" Height="23" Margin="284,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="CreateProfileButton" Content="OK" HorizontalAlignment="Left" Margin="301,209,0,0" VerticalAlignment="Top" Width="75" Click="CreateProfileButton_Click"/>
+        <Button x:Name="CancelCreateProfileButton" Content="Cancel" HorizontalAlignment="Left" Margin="175,209,0,0" VerticalAlignment="Top" Width="75" Click="CancelCreateProfileButton_Click"/>
 
     </Grid>
 </Window>

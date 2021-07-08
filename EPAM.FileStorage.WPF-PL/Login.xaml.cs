@@ -22,6 +22,7 @@ namespace EPAM.FileStorage.WPF_PL
     public partial class Login : Window
     {
         public Profile profile;
+        public bool Logged = false;
         ProfileLogic profileLogic;
         public Login()
         {
@@ -45,6 +46,7 @@ namespace EPAM.FileStorage.WPF_PL
                     profile = profileLogic.Login(profile.Name, profile.Password);
 
                     MessageBox.Show($"You are logged in as {profile.Name}", "Success", MessageBoxButton.OK);
+                    Logged = true;
                     Close();
                 }
                 catch (Exception ex)
